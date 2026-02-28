@@ -1,0 +1,18 @@
+{
+  "users": ["XXXXX", ""YYYY"],
+  "poll_interval_seconds": 12,
+  "rapid_watch_seconds": 600,
+  "rapid_poll_interval_seconds": 5,
+
+  "recordings_dir": "./recordings",
+
+  "notifier": {
+    "type": "ntfy",
+    "ntfy_url": "https://ntfy.sh/your-topic"
+  },
+
+  "recorder": {
+    "type": "command",
+    "command_template": "streamlink --stdout \"https://www.tiktok.com/@{username}/live\" best | ffmpeg -hide_banner -loglevel warning -y -i pipe:0 -c copy \"{output}\""
+  }
+}

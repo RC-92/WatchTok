@@ -1,0 +1,7 @@
+venv/
+logs/
+run/
+recordings/
+state.json
+__pycache__/
+*.pyc
